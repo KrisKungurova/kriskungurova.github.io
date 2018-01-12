@@ -153,7 +153,6 @@ ul {
   .page-header__descr {
     margin: 0;
     padding-top: 75px;
-    padding-right: 80px;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -476,12 +475,12 @@ ul {
     width: 215px;
     height: 400px;
   }
-/*  .gallery__item-img-med.slick-slide {
+  .slick-slide .gallery__item-img-med {
     display: none;
   }
-  .gallery__item-img-lg.slick-slide {
+  .slick-slide .gallery__item-img-lg{
     display: none;
-  }*/
+  }
   .price {
   }
   .price__container {
@@ -600,7 +599,7 @@ ul {
     margin: 0 auto;
     width: 320px;
     height: 812px;
-    background-image: url(../img/320/нижн.подл..jpg);
+    background-image: url(../img/320/foot.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     z-index: 1;
@@ -1092,7 +1091,7 @@ ul {
   .shares__title {
   }
   .shares__block {
-   
+   padding-left: 14px;
   }
   .shares__block-box {
     display: inline-block;
@@ -1159,11 +1158,15 @@ ul {
     width: 740px;
   }
   .gallery__item {
-    box-sizing: border-box;
-    
+    display: inline-block;
+    text-align: center;
+    width: 33.333333%;
+  }
+  .gallery__item:first-child {
+    text-align: left;
   }
   .gallery__item:last-child {
-    /*padding-right: 0;*/
+    text-align: right;
   }
   .promo-slider__slide {
   }
@@ -1392,7 +1395,7 @@ ul {
   .reviews__title {
   }
   .reviews__size {
-    width: 740px;
+    width: 650px;
   }
   .page-footer {
     z-index: 2;
@@ -1406,9 +1409,10 @@ ul {
     height: 400px;
     float: right;
     right: 14px;
+    box-sizing: border-box;
   }
   .page-footer__nav{
-    padding-left: 14px;
+    box-sizing: border-box;
   }
   .page-footer__list {
     padding-top: 30px;
@@ -1468,18 +1472,19 @@ ul {
   }
   .trails__container {
   }
-  .container {
-  }
   .trails__title {
     
   }
   .trails__block {
-    width: 1190px;
+    width: 100%;
     padding-top: 40px;
   }
   .trails-programm {
     display: inline-block;
-    width: 20%;
+    margin-right: 1%;
+  }
+  .trails-programm:last-child {
+    margin-right: 0;
   }
   .trails__item:nth-child(2n) {
     top: 75px;
@@ -1511,6 +1516,15 @@ ul {
     margin: 0;
     padding-top: 85px;
     box-sizing: border-box;
+    /*text-align: center;*/
+  }
+  .shares__block:first-child {
+    /*text-align: left;*/
+    padding-left: 0;
+  }
+  .shares__block:last-child {
+    /*text-align: right;*/
+    padding-right: 0;
   }
   .shares__block-box {
   }
@@ -1556,6 +1570,8 @@ ul {
   .we-have__text3 {
   }
   .gallery {
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
   .gallery__container {
   }
@@ -1565,16 +1581,24 @@ ul {
     width: 1200px;
   }
   .gallery__item {
+    box-sizing: border-box;
+  }
+  .gallery__item:first-child {
+    padding-left: 0;
+  }
+  .gallery__item:last-child {
+    padding-right: 0;
   }
   .promo-slider__slide {
   }
   .gallery__item-img {
+    display: none;
   }
   .gallery__item-img-med {
     display: none;
   }
   .gallery__item-img-lg {
-
+    display: inline-block;
   }
   .price-desc {
 
@@ -1586,11 +1610,13 @@ ul {
   .price-desc__form {
   }
   .price__bg {
+    top: 85px;
     width: 1280px;
     height: 1786px;
     background-image: url(../img/desc/foot.jpg);
   }
   .price-desc__table {
+    padding-top: 45px;
   }
   .price-desc__row {
   }
@@ -1637,6 +1663,7 @@ ul {
   .reviews__title {
   }
   .reviews__size {
+    width: 1172px;
   }
   .promo-slider {
   }

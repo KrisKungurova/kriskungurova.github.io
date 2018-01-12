@@ -95,6 +95,7 @@ $(document).ready(function(){
       mobileFirst: true,
       infinite: true,
       slidesToScroll: 1,
+      initialSlide: 1,
       responsive: [
         {
           breakpoint: 0,
