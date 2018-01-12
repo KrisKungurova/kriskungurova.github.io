@@ -104,6 +104,7 @@ ul {
     background-image: url(../img/320/iswanto-arif-137501.jpg);
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: cover;
   }
   .page-header__container {
     
@@ -127,7 +128,7 @@ ul {
   }
   .page-header__promo {
     padding-top: 70px;
-    padding-bottom: 85px;
+    padding-bottom: 130px;
   }
   .page-header__title {
     margin: 0;
@@ -182,6 +183,7 @@ ul {
     background-position: top center;
     position: relative;
     min-height: 529px;
+    background-size: cover;
   }
   .trails__container {
   }
@@ -348,7 +350,7 @@ ul {
   .shares__block {
     position: relative;
     display: block;
-    margin: 0 auto;
+    padding-left: 14px;
     margin-top: 10px;
   }
   .shares__block-box{
@@ -415,7 +417,7 @@ ul {
   }
   .we-have__block {
     position: relative;
-    padding-left: 30px;
+    padding-left: 28px;
     padding-bottom: 40px;
   }
   .we-have__block:last-child {
@@ -432,7 +434,7 @@ ul {
   .we-have__text {
     position: absolute;
     margin: 0;
-    width: 210px;
+    padding-right: 28px;
     top: 0px;
     left: 90px;
     font-family: "Open Sans", sans-serif;
@@ -441,9 +443,6 @@ ul {
     font-weight: normal;
     letter-spacing: 0.030px;
     color: #fffffe;
-  }
-  .we-have__text2 {
-    
   }
   .we-have__icon2 {
     display: inline-flex;
@@ -597,11 +596,11 @@ ul {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 320px;
-    height: 812px;
+    min-height: 812px;
     background-image: url(../img/320/foot.jpg);
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 1;
   }
   .price__full {
