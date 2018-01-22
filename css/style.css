@@ -984,7 +984,10 @@ ul {
     background-image: url(../img/spritesheet.png);
     background-position: -5px -177px;
   }
-  .burger-link {
+  .menu-link-box {
+    display: none;
+  }
+  .menu-link {
     display: none;
   }
   .page-header {
