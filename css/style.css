@@ -41,18 +41,22 @@ ul {
   .fast-contacts__address {
     display: none;
   }
-  .burger-link {
+  .menu-link-box {
     display: block;
+    width: 20px;
+    height: 20px;
+    float: right;
+  }
+  .menu-link {
     float: right;
     width: 4px;
     height: 20px;
     background-position: -48px -5px;
   }
-  .burger-link:active {
-    
-  }
   .burger {
-    display: none;
+    display: block;
+    position: absolute;
+    opacity: 0;
     width: 100%;
     padding-top: 75px;
     padding-bottom: 110px;
@@ -61,6 +65,11 @@ ul {
     border-top: 1px solid #22313f;
     background-color: #e9e9f1;
     text-align: center;
+    transition: all 0.5s;
+    z-index: 1;
+  }
+  .burger__append {
+    opacity: 1;
   }
   .burger__item {
     padding-top: 5px;
@@ -127,8 +136,8 @@ ul {
   .page-nav__link {
   }
   .page-header__promo {
-    padding-top: 70px;
-    padding-bottom: 130px;
+    padding-top: 75px;
+    padding-bottom: 85px;
   }
   .page-header__title {
     margin: 0;
@@ -153,7 +162,7 @@ ul {
   }
   .page-header__descr {
     margin: 0;
-    padding-top: 75px;
+    padding-top: 85px;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     line-height: 30px;

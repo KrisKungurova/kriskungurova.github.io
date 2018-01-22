@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+  //бургер-меню
+
+  $('.menu-link-box, .burger').click(function(){
+    $('.burger').toggleClass('burger__append');
+  });
+});
+
+
+$(document).ready(function(){
+
   // Карусель промо блока
 
   var timer;
