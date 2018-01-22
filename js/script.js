@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  // Карусель промо блока
+  // Карусель блока трассы
 
   var timer;
   $(window).on('resize', function(){
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  // Карусель промо блока
+  // Карусель блока галерея
 
   var timer;
   $(window).on('resize', function(){
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  // Карусель промо блока
+  // Карусель блока отзывы
 
   var timer;
   $(window).on('resize', function(){
