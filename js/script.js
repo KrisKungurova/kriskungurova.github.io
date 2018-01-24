@@ -38,6 +38,8 @@ $(document).ready(function(){
           breakpoint: 767,
           settings: {
             slidesToShow: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
           }
         },
         {
@@ -132,6 +134,9 @@ $(document).ready(function(){
 });
 
 $(function () {
+
+  // аккордион для блока с ценами на 320рх
+
   var el = $('#price-list li a');
   el.click(function() {
     var checkElement = $(this).next();
@@ -144,6 +149,8 @@ $(function () {
 });
 
 $(document).ready(function(){ 
+
+  //кнопка прокрутки вверх
 
   $('#scroll-top-btn').on('click', function (event) { 
     event.preventDefault();
@@ -171,6 +178,4 @@ $(document).ready(function(){
   
 });
 
-$(document).ready(function(){ 
-  $('input').iCheck();
-});
+

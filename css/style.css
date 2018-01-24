@@ -1462,6 +1462,7 @@ ul {
   }
   .icon-top {
     left: 14px;
+    bottom: 40px;
     z-index: 2;
   }
 }
@@ -1505,6 +1506,9 @@ ul {
   .trails__item:nth-child(2n) {
     top: 75px;
   }
+  .trails-programm:hover {
+    box-shadow: 4px 0 29px rgba(0, 0, 0, .55);
+  }
   .trails-programm__image {
   }
   .trails-programm__photo {
@@ -1536,7 +1540,7 @@ ul {
   }
   .shares__block:first-child {
     /*text-align: left;*/
-    padding-left: 0;
+    /*padding-left: 0;*/
   }
   .shares__block:last-child {
     /*text-align: right;*/
@@ -1553,7 +1557,36 @@ ul {
     display: inline-block;
   }
   .shares__block-text {
-    padding: 35px 40px;
+    padding: 35px 15px;
+  }
+  .shares__block-color-layer {
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    width: 359px;
+    height: 343px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .5s;
+  }
+  .shares__block-color-layer:hover {
+    opacity: 1;
+    
+  }
+  .shares__block-link {
+    position: absolute;
+    width: 92px;
+    height: 18px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 16px;
+    font-family: "Open Sans" , sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.030em;
+    color: #fefefe;
+    text-decoration: underline;
   }
   .we-have {
   }
