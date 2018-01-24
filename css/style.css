@@ -1649,6 +1649,44 @@ ul {
   .gallery__item-img-lg {
     display: inline-block;
   }
+  .gallery__item-hover {
+    display: inline-block;
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    width: 359px;
+    height: 484px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .5s;
+  }
+  .gallery__item-hover-icon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 87px;
+    height: 89px;
+    background-position: -360px -5px;
+  }
+  .--position-left {
+    padding-left: 0;
+    left: 0;
+  }
+  .--position-center {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .--position-right {
+    padding-right: 0;
+    right: 0;
+  }
+  .gallery__item-hover:hover {
+    opacity: 1;
+  }
   .price-desc {
 
   }
