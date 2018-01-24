@@ -990,6 +990,9 @@ ul {
   .menu-link {
     display: none;
   }
+  .burger {
+    display: none;
+  }
   .page-header {
     padding-top: 5px;
     background-image: url(../img/768/iswanto-arif-137501.jpg);
@@ -1472,6 +1475,9 @@ ul {
     position: absolute;
     top: 9%;
     left: 12%;
+  }
+  .burger {
+    display: none;
   }
   .trails {
     background-image: url(../img/desc/iswanto-arif-135737.jpg);
