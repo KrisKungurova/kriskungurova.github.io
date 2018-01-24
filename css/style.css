@@ -1193,8 +1193,17 @@ ul {
   .price {
     display: none;
   }
+  .price__bg {
+    position: absolute;
+    margin-top: 100px;
+    height: 1564px;
+    background-image: url(../img/768/foot.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .price-desc {
-    display: inline-block;
+    display: block;
   }
   .price-desc__container {
     position: relative;
@@ -1223,19 +1232,6 @@ ul {
   }
   .price-desc__form {
     width: 100%;
-  }
-  .price__bg {
-    position: absolute;
-    top: 173px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 768px;
-    height: 1488px;
-    background-image: url(../img/768/foot.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    z-index: 1;
   }
   .price-desc__table {
     position: relative;
@@ -1359,7 +1355,7 @@ ul {
     line-height: 24px;
     letter-spacing: 0.030em;
     color: #22313f;
-    background-color: rgba(231, 231, 231, 0.64);
+    background-color: rgba(231, 231, 231, 0.91);
   }
   .price-desc__operator-price{
     padding:13px 15px;
@@ -1370,7 +1366,7 @@ ul {
     line-height: 24px;
     letter-spacing: 0.030em;
     color: #22313f;
-    background-color: rgba(231, 231, 231, 0.64);
+    background-color: rgba(231, 231, 231, 0.91);
   }
   .price-desc__ftr {
     position: relative;
@@ -1402,6 +1398,7 @@ ul {
   .reviews {
   }
   .reviews__container {
+    width: 712px;
   }
   .reviews__title {
   }
