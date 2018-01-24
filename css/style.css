@@ -1078,6 +1078,7 @@ ul {
   }
   .page-header__btn {
     margin: 0;
+    background-color: rgba(230, 230, 238, .54);
   }
   .trails {
     background-image: url(../img/768/iswanto-arif-135737.jpg);
@@ -1472,9 +1473,10 @@ ul {
     padding-bottom: 285px;
   }
   .page-header__btn {
-    position: absolute;
-    top: 9%;
-    left: 12%;
+    position: relative;
+    top: -505px;
+    left: 120px;
+    background-color: rgba(230, 230, 238, .54);
   }
   .burger {
     display: none;
@@ -1744,7 +1746,7 @@ ul {
   .page-footer__instagramm {
   }
   .icon-top {
-    left: 4%;
+    left: 0;
     bottom: 25px;
   }
 }
