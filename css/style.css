@@ -1653,6 +1653,7 @@ ul {
   .--block {
   }
   .price-desc__item {
+    text-align: center;
   }
   .price-desc__radio {
   }
@@ -1714,8 +1715,10 @@ ul {
   .map {
     width: 740px;
     height: 416px;
+    right: 0;
   }
   .page-footer__nav {
+    padding-left: 0;
   }
   .page-footer__address {
     display: inline-block;
