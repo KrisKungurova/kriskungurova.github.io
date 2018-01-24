@@ -1102,16 +1102,16 @@ ul {
   .shares__title {
   }
   .shares__block {
-   padding-left: 14px;
+   /*padding-left: 14px;*/
   }
   .shares__block-box {
-    display: inline-block;
+    /*display: inline-block;*/
   }
   .shares__block-image {
     display: none;
   }
   .shares__block-image-med {
-    display: inline-block;
+    display: block;
   }
   .shares__block-image-lg {
     display: none;
