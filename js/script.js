@@ -90,6 +90,45 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
+  //обводка выбранной цены
+
+  $('.price-desc__item').click(function(){
+
+    $('.price-desc__item').append('<span class="checked-icon"></span>');
+    $('.price-desc__item').addClass('border-active');
+
+  });
+  $('.price-desc__item').dblclick(function(){
+      $('.checked-icon').remove();
+      $('.price-desc__item').removeClass('border-active');
+    });
+});
+
+
+$(document).ready(function(){
+
+  //подсчет цены
+
+  $('#price input:radio').on('change', function(){
+    calcPrice();
+  });
+
+  calcPrice();
+
+  function calcPrice () {
+    var price = 0;
+
+    $('#price input:checked').each(function(){
+      price = price + $(this).data('price');
+    });
+
+    $('#price-view').text(price);
+  }
+
+});
+
+$(document).ready(function(){
+
   // Карусель блока отзывы
 
   var timer;

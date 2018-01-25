@@ -1779,6 +1779,21 @@ ul {
   }
   .price-desc__item {
     text-align: center;
+    position: relative;
+  }
+  .price-desc__item:hover {
+    border: 2px solid #67727c;
+  }
+  .border-active {
+    border: 2px solid #960000;
+  }
+  .checked-icon {
+    background-image: url(../img/checked.png);
+    width: 22px;
+    height: 16px;
+    position: absolute;
+    right: 40px;
+
   }
   .price-desc__radio {
   }
