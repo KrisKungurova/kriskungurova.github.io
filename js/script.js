@@ -119,12 +119,16 @@ $(document).ready(function(){
           breakpoint: 767,
           settings: {
             slidesToShow: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
           }
         },
         {
           breakpoint: 1199,
           settings: {
             slidesToShow: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
           }
         },
       ]

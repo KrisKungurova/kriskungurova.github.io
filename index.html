@@ -20,7 +20,7 @@
       
       <div id="burger" class="menu-link-box"><span class="menu-link icon"></span></div>
       <div class="row">
-        <ul class="burger">
+        <ul class="burger container">
           <li class="burger__item"><a href="#" class="burger__link">Трассы</a></li>
           <li class="burger__item"><a href="#" class="burger__link">Акции</a></li>
           <li class="burger__item"><a href="#" class="burger__link">Цены</a></li>
@@ -261,50 +261,54 @@
   </section>
 
   <section class="price"> 
-    <div class="price__container">
+    <div class="price__container container">
       <h2 class="price-title">Цены</h2>
+      
+      <div class="row">
+        <ul id="price-list" class="price-list">
+          <li class="price-list__item">
+            <a href="#" class="price-list__link">Выберите возраст</a>
+            <ul class="price-list__inner-list">
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Детский</h3> от 7 лет</a></li>
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Взрослый</h3> от 7 лет</a></li>
+            </ul>
+          </li>
 
-      <ul id="price-list" class="price-list">
-        <li class="price-list__item">
-          <a href="#" class="price-list__link">Выберите возраст</a>
-          <ul class="price-list__inner-list">
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Детский</h3> от 7 лет</a></li>
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Взрослый</h3> от 7 лет</a></li>
-          </ul>
-        </li>
+          <li class="price-list__item">
+            <a href="#" class="price-list__link">Выберите место</a>
+            <ul class="price-list__inner-list">
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Все трассы</h3> веревочный парк + скалодром</a></li>
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Скалодром</h3></a></li>
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Веревочный парк</h3></a></li>
+            </ul>
+          </li>
 
-        <li class="price-list__item">
-          <a href="#" class="price-list__link">Выберите место</a>
-          <ul class="price-list__inner-list">
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Все трассы</h3> веревочный парк + скалодром</a></li>
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Скалодром</h3></a></li>
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Веревочный парк</h3></a></li>
-          </ul>
-        </li>
-
-        <li class="price-list__item">
-          <a href="#" class="price-list__link">Выберите длительность</a>
-          <ul class="price-list__inner-list">
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Прохождение парка за 3 часа</h3></a></li>
-            <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Прохождение парка за 12 часов</h3></a></li>
-          </ul>
-        </li>
-      </ul>
+          <li class="price-list__item">
+            <a href="#" class="price-list__link">Выберите длительность</a>
+            <ul class="price-list__inner-list">
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Прохождение парка за 3 часа</h3></a></li>
+              <li class="price-list__inner-item"><a href="#" class="price-list__inner-link"><h3 class="price-list__title">Прохождение парка за 12 часов</h3></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
       <div class="price__bg"></div>
-      <div class="price__full">
-        <p class="price__aboniment">Стоимость абонимента</p>
-        <span class="price__digits">0 Р</span>
-      </div>
-      <div class="price__about">
-        <p class="price__about-buy">Персональный оператор парка</p>
-        <span class="price__about-digits">600р/ч</span>
-        <p class="price__about-buy">Каждый дополнительный час</p>
-        <span class="price__about-digits">500р</span>
-      </div>
-      <div class="price__ftr">
-        <a href="#" class="price__about-btn">Купить билет</a>
-        <a href="#" class="price__about-security">Техника безопасности (PDF)</a>
+      <div class="row">
+        <div class="price__full">
+          <p class="price__aboniment">Стоимость абонимента</p>
+          <span class="price__digits">0 Р</span>
+        </div>
+        <div class="price__about">
+          <p class="price__about-buy">Персональный оператор парка</p>
+          <span class="price__about-digits">600р/ч</span>
+          <p class="price__about-buy">Каждый дополнительный час</p>
+          <span class="price__about-digits">500р</span>
+        </div>
+        <div class="price__ftr">
+          <a href="#" class="price__about-btn">Купить билет</a>
+          <a href="#" class="price__about-security">Техника безопасности (PDF)</a>
+        </div>
       </div>
     </div>
   </section>

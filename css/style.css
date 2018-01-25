@@ -1,5 +1,6 @@
 ul {
   padding-left: 0;
+  list-style-type: none;
 }
 .icon {
   background: url(../img/spritesheet.png);
@@ -57,7 +58,6 @@ ul {
     display: block;
     position: absolute;
     opacity: 0;
-    width: 100%;
     padding-top: 75px;
     padding-bottom: 110px;
     margin: 0;
@@ -180,6 +180,7 @@ ul {
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0.025em;
     border: 1px solid #211811;
+    background-color: rgba( 230, 230, 238, .54);
   }
   .page-header__btn {
     display: inline-block;
@@ -386,6 +387,9 @@ ul {
     letter-spacing: 0.030em;
     color: #fefefe;
   }
+  .shares__block-color-layer {
+    display: none;
+  }
   .we-have {
     position: relative;
   }
@@ -492,7 +496,7 @@ ul {
   .price {
   }
   .price__container {
-    width: 100%;
+    
   }
   .price-title {
     position: relative;
@@ -827,6 +831,7 @@ ul {
     top: 44px;
     padding-bottom: 40px;
     background-color: #22313f;
+    z-index: 2;
   }
   .page-footer__container {
 
@@ -1124,6 +1129,9 @@ ul {
     font-weight: normal;
     padding: 15px 40px;
     bottom: 4px;
+  }
+  .shares__block-color-layer {
+    display: none;
   }
   .we-have {
   }
