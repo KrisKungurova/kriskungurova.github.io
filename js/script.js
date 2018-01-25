@@ -88,21 +88,21 @@ $(document).ready(function(){
 
 });
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  //обводка выбранной цены
+//   //обводка выбранной цены
 
-  $('.price-desc__item').click(function(){
+//   $('.price-desc__item').on('click',function(){
 
-    $('.price-desc__item').append('<span class="checked-icon"></span>');
-    $('.price-desc__item').addClass('border-active');
+//     $('.price-desc__item').append('<span class="checked-icon"></span>');
+//     $('.price-desc__item').addClass('border-active');
 
-  });
-  $('.price-desc__item').dblclick(function(){
-      $('.checked-icon').remove();
-      $('.price-desc__item').removeClass('border-active');
-    });
-});
+//   });
+//   $('.price-desc__item').dblclick(function(){
+//       $('.checked-icon').remove();
+//       $('.price-desc__item').removeClass('border-active');
+//     });
+// });
 
 
 $(document).ready(function(){
@@ -115,7 +115,7 @@ $(document).ready(function(){
 
   calcPrice();
 
-  function calcPrice () {
+  function calcPrice() {
     var price = 0;
 
     $('#price input:checked').each(function(){
@@ -225,66 +225,130 @@ $(document).ready(function(){
 
   //модальное окно галереи
 
-  $("#btn-modal-first").click(function(){
+  $('#btn-modal-first').click(function(){
     var img = new Image();
-    img.src = "../img/desc/photo1modal.jpg";
+    img.src = '../img/desc/photo1modal.jpg';
 
-    $("body").append("<div class='popup'>"+
-                      "<div class='popup_bg'>" +
-                        "<img src='"+img.src+"'class='popup_img' />"+
-                        "<span class='close-modal icon'></span>"+
-                      "</div>"+
-                    "</div>");
-    $(".popup").fadeIn(800);
+    $('body').append('<div class="popup">'+
+                      '<div class="popup_bg">' +
+                        '<img src="'+img.src+'"class="popup_img" />'+
+                        '<span class="close-modal icon"></span>'+
+                      '</div>'+
+                    '</div>');
+    $('.popup').fadeIn(800);
+    $('body').css('overflow-y','hidden');
 
-    $(".close-modal").click(function(){
-      $("popup").fadeOut(800);
+    $('.close-modal').click(function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
 
       setTimeout(function(){
-        $(".popup").remove();
+        $('.popup').remove();
       }, 800);
+    });
+
+    $('.popup_bg').click(function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
+
+      setTimeout(function(){
+        $('.popup').remove();
+      }, 800);
+    });
+
+    $(document).keydown(function(eventObject){
+      if (eventObject.which == 27)
+        $('popup').fadeOut(800);
+        $('body').css('overflow-y','');
+
+        setTimeout(function(){
+          $('.popup').remove();
+        }, 800);
     });
   });
 
-  $("#btn-modal-second").click(function(){
+
+  $('#btn-modal-second').click(function(){
     var img = new Image();
-    img.src = "../img/desc/photo2.jpg";
+    img.src = '../img/desc/photo2.jpg';
 
-    $("body").append("<div class='popup'>"+
-                      "<div class='popup_bg'>" +
-                        "<img src='"+img.src+"'class='popup_img' />"+
-                        "<span class='close-modal icon'></span>"+
-                      "</div>"+
-                    "</div>");
-    $(".popup").fadeIn(800);
+    $('body').append('<div class="popup">'+
+                      '<div class="popup_bg">' +
+                        '<img src="'+img.src+'"class="popup_img" />'+
+                        '<span class="close-modal icon"></span>'+
+                      '</div>'+
+                    '</div>');
+    $('.popup').fadeIn(800);
+    $('body').css('overflow-y','hidden');
 
-    $(".close-modal").click(function(){
-      $("popup").fadeOut(800);
+    $('.close-modal').click(function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
 
       setTimeout(function(){
-        $(".popup").remove();
+        $('.popup').remove();
       }, 800);
+    });
+
+    $('.popup_bg').click(function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
+
+      setTimeout(function(){
+        $('.popup').remove();
+      }, 800);
+    });
+
+    $(document).keydown(function(eventObject){
+      if (eventObject.which == 27)
+        $('popup').fadeOut(800);
+        $('body').css('overflow-y','');
+
+        setTimeout(function(){
+          $('.popup').remove();
+        }, 800);
     });
   });
 
-  $("#btn-modal-third").click(function(){
+  $('#btn-modal-third').click(function(){
     var img = new Image();
-    img.src = "../img/desc/photo3.jpg";
+    img.src = '../img/desc/photo3.jpg';
 
-    $("body").append("<div class='popup'>"+
-                      "<div class='popup_bg'>" +
-                        "<img src='"+img.src+"'class='popup_img' />"+
-                        "<span class='close-modal icon'></span>"+
-                      "</div>"+
-                    "</div>");
-    $(".popup").fadeIn(800);
+    $('body').append('<div class="popup">'+
+                      '<div class="popup_bg">' +
+                        '<img src="'+img.src+'"class="popup_img" />'+
+                        '<span class="close-modal icon"></span>'+
+                      '</div>'+
+                    '</div>');
+    $('.popup').fadeIn(800);
+    $('body').css('overflow-y','hidden');
 
-    $(".close-modal").click(function(){
-      $("popup").fadeOut(800);
+    $('.close-modal').click(function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
 
       setTimeout(function(){
-        $(".popup").remove();
+        $('.popup').remove();
       }, 800);
+    });
+
+    $('.popup_bg').click(function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
+
+      setTimeout(function(){
+        $('.popup').remove();
+      }, 800);
+    });
+
+    $(document).keydown(function(eventObject){
+      if (eventObject.which == 27)
+        $('popup').fadeOut(800);
+        $('body').css('overflow-y','');
+
+        setTimeout(function(){
+          $('.popup').remove();
+        }, 800);
     });
   });
 
