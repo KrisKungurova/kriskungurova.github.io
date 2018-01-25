@@ -1723,6 +1723,7 @@ ul {
     width: 359px;
     height: 484px;
     z-index: 3;
+    box-shadow: 4px 0 29px rgba(0, 0, 0, .55);
   }
   .close-modal {
     display: inline-block;
