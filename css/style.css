@@ -1631,6 +1631,7 @@ ul {
   }
   .gallery__item {
     box-sizing: border-box;
+    outline: none;
   }
   .gallery__item:first-child {
     padding-left: 0;
@@ -1667,6 +1668,7 @@ ul {
     bottom: 0;
     left: 0;
     margin: auto;
+    cursor: pointer;
     width: 87px;
     height: 89px;
     background-position: -360px -5px;
@@ -1686,6 +1688,47 @@ ul {
   }
   .gallery__item-hover:hover {
     opacity: 1;
+  }
+  .popup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+  }
+  .popup_bg {
+    position: fixed;
+    background: rgba( 0, 0, 0, .4);
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+  .popup_img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 359px;
+    height: 484px;
+    z-index: 3;
+  }
+  .close-modal {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    width: 41px;
+    height: 43px;
+    background-position: -360px -100px;
+    z-index: 3;
   }
   .price-desc {
 

@@ -178,4 +178,71 @@ $(document).ready(function(){
   
 });
 
+$(document).ready(function(){
 
+  //модальное окно галереи
+
+  $("#btn-modal-first").click(function(){
+    var img = new Image();
+    img.src = "../img/desc/photo1modal.jpg";
+
+    $("body").append("<div class='popup'>"+
+                      "<div class='popup_bg'>" +
+                        "<img src='"+img.src+"'class='popup_img' />"+
+                        "<span class='close-modal icon'></span>"+
+                      "</div>"+
+                    "</div>");
+    $(".popup").fadeIn(800);
+
+    $(".close-modal").click(function(){
+      $("popup").fadeOut(800);
+
+      setTimeout(function(){
+        $(".popup").remove();
+      }, 800);
+    });
+  });
+
+  $("#btn-modal-second").click(function(){
+    var img = new Image();
+    img.src = "../img/desc/photo2.jpg";
+
+    $("body").append("<div class='popup'>"+
+                      "<div class='popup_bg'>" +
+                        "<img src='"+img.src+"'class='popup_img' />"+
+                        "<span class='close-modal icon'></span>"+
+                      "</div>"+
+                    "</div>");
+    $(".popup").fadeIn(800);
+
+    $(".close-modal").click(function(){
+      $("popup").fadeOut(800);
+
+      setTimeout(function(){
+        $(".popup").remove();
+      }, 800);
+    });
+  });
+
+  $("#btn-modal-third").click(function(){
+    var img = new Image();
+    img.src = "../img/desc/photo3.jpg";
+
+    $("body").append("<div class='popup'>"+
+                      "<div class='popup_bg'>" +
+                        "<img src='"+img.src+"'class='popup_img' />"+
+                        "<span class='close-modal icon'></span>"+
+                      "</div>"+
+                    "</div>");
+    $(".popup").fadeIn(800);
+
+    $(".close-modal").click(function(){
+      $("popup").fadeOut(800);
+
+      setTimeout(function(){
+        $(".popup").remove();
+      }, 800);
+    });
+  });
+
+});
