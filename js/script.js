@@ -11,10 +11,14 @@ $(document).ready(function(){
 
   //переход по нажатию кнопки "купить билет" к соотв-му блоку
 
-    $('#price-desc').on('click', function (event) { 
-    event.preventDefault();
-    $('body,html').animate({scrollTop :top},1000); 
-  });
+    $('a[href*=#btn-buy]').on('click', function(e){
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+    });
 });
 
 
