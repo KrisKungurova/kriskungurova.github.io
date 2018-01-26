@@ -115,6 +115,15 @@ $(document).ready(function(){
 
   $('input:checkbox').on('change', function(){
     calcPrice();
+    // $(this).parent().css('border','2px solid #960000');
+    // console.log('!!!');
+    if ( $(this).parent().hasClass('price-desc--check') ) { 
+    $(this).parent().removeClass('price-desc--check'); 
+    } 
+
+    if ( !$(this).parent().hasClass('price-desc--check') ) { 
+    $(this).parent().addClass('price-desc--check'); 
+    }
   });
 
   calcPrice();
@@ -125,7 +134,6 @@ $(document).ready(function(){
     $('input:checked').each(function(){
       price = price + $(this).data('price');
     });
-
     $('#price-view').text(price);
   }
 

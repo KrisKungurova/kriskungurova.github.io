@@ -1793,12 +1793,12 @@ ul {
     opacity: 0;
     margin: 10px;
   }
-  input:checked + label {
-    border: 1px solid #000;
-  }
   .price-desc__text {
     position: relative;
     cursor: pointer;
+  }
+  .price-desc--check {
+    border: 2px solid #960000;
   }
   .price-desc__title-row {
   }
