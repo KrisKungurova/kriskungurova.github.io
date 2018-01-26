@@ -723,7 +723,7 @@ ul {
   }
   .price-desc__item {
   }
-  .price-desc__radio {
+  .price-desc__check {
   }
   .price-desc__text {
   }
@@ -1311,13 +1311,10 @@ ul {
   .price-desc__item {
     
   }
-  .price-desc__radio {
-    opacity: 0;
+  .price-desc__check {
+    /*opacity: 0;
     position: absolute;
-  }
-  .price-desc__radio.checked {
-    border: 1px solid #000;
-  }
+*/ }
   .price-desc__text {
     padding: 20px 115px;
     font-size: 18px;
@@ -1570,6 +1567,7 @@ ul {
   }
   .shares__block-color-layer {
     opacity: 0;
+    display: block;
     position: absolute;
     top: 85px;
     width: 359px;
@@ -1781,9 +1779,6 @@ ul {
   .price-desc__item:hover {
     border: 2px solid #67727c;
   }
-  .price-desc__text:checked {
-    border: 2px solid #960000;
-  }
   .checked-icon {
     background-image: url(../img/checked.png);
     width: 22px;
@@ -1792,9 +1787,18 @@ ul {
     right: 40px;
 
   }
-  .price-desc__radio {
+  .price-desc__check {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px;
+  }
+  input:checked + label {
+    border: 1px solid #000;
   }
   .price-desc__text {
+    position: relative;
+    cursor: pointer;
   }
   .price-desc__title-row {
   }
@@ -1805,6 +1809,13 @@ ul {
   .price-desc__operator {
   }
   .price-desc__operator-price {
+  }
+  .price-view {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    z-index: 2;
   }
   .price-desc__ftr {
   }

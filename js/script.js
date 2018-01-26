@@ -7,6 +7,16 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+
+  //переход по нажатию кнопки "купить билет" к соотв-му блоку
+
+    $('#price-desc').on('click', function (event) { 
+    event.preventDefault();
+    $('body,html').animate({scrollTop :top},1000); 
+  });
+});
+
 
 $(document).ready(function(){
 
@@ -88,28 +98,18 @@ $(document).ready(function(){
 
 });
 
-// $(document).ready(function(){
+$(document).ready(function(){
 
-//   //обводка выбранной цены
+  //обводка выбранной цены
 
-//   $('.price-desc__item').on('click',function(){
-
-//     $('.price-desc__item').append('<span class="checked-icon"></span>');
-//     $('.price-desc__item').addClass('border-active');
-
-//   });
-//   $('.price-desc__item').dblclick(function(){
-//       $('.checked-icon').remove();
-//       $('.price-desc__item').removeClass('border-active');
-//     });
-// });
+});
 
 
 $(document).ready(function(){
 
   //подсчет цены
 
-  $('#price input:radio').on('change', function(){
+  $('input:checkbox').on('change', function(){
     calcPrice();
   });
 
@@ -118,12 +118,13 @@ $(document).ready(function(){
   function calcPrice() {
     var price = 0;
 
-    $('#price input:checked').each(function(){
+    $('input:checked').each(function(){
       price = price + $(this).data('price');
     });
 
     $('#price-view').text(price);
   }
+
 
 });
 
