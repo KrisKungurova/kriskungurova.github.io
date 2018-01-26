@@ -1716,28 +1716,24 @@ ul {
   }
   .popup_img {
     position: absolute;
-    margin: auto;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    margin: auto;
     width: 359px;
     height: 484px;
     z-index: 3;
     box-shadow: 4px 0 29px rgba(0, 0, 0, .55);
   }
-  .close-modal {
+  .popup_img:after {
     display: inline-block;
+    content: '';
     position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     cursor: pointer;
     width: 41px;
     height: 43px;
-    background-position: -360px -100px;
+    background-image: url(../img/close.png);
     z-index: 3;
   }
   .price-desc {

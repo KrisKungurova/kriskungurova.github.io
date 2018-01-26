@@ -227,12 +227,11 @@ $(document).ready(function(){
 
   $('#btn-modal-first').click(function(){
     var img = new Image();
-    img.src = '../img/desc/photo1modal.jpg';
+    img.src = '../img/desc/photo1.jpg';
 
     $('body').append('<div class="popup">'+
                       '<div class="popup_bg">' +
                         '<img src="'+img.src+'"class="popup_img" />'+
-                        '<span class="close-modal icon"></span>'+
                       '</div>'+
                     '</div>');
     $('.popup').fadeIn(800);
@@ -275,7 +274,6 @@ $(document).ready(function(){
     $('body').append('<div class="popup">'+
                       '<div class="popup_bg">' +
                         '<img src="'+img.src+'"class="popup_img" />'+
-                        '<span class="close-modal icon"></span>'+
                       '</div>'+
                     '</div>');
     $('.popup').fadeIn(800);
@@ -317,7 +315,6 @@ $(document).ready(function(){
     $('body').append('<div class="popup">'+
                       '<div class="popup_bg">' +
                         '<img src="'+img.src+'"class="popup_img" />'+
-                        '<span class="close-modal icon"></span>'+
                       '</div>'+
                     '</div>');
     $('.popup').fadeIn(800);
