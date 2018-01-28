@@ -114,26 +114,23 @@ $(document).ready(function(){
   //подсчет цены
 
   $('input:checkbox').on('change', function(){
+    $(this).parent().removeClass('price-desc--check');
+    $('span').removeClass('price-desc__check-icon');
     calcPrice();
-    // $(this).parent().css('border','2px solid #960000');
-    // console.log('!!!');
-    if ( $(this).parent().hasClass('price-desc--check') ) { 
-    $(this).parent().removeClass('price-desc--check'); 
-    } 
-
-    if ( !$(this).parent().hasClass('price-desc--check') ) { 
-    $(this).parent().addClass('price-desc--check'); 
-    }
   });
 
   calcPrice();
 
   function calcPrice() {
     var price = 0;
+    
 
     $('input:checked').each(function(){
       price = price + $(this).data('price');
+      $(this).parent().addClass('price-desc--check');
+      $(this).parent().append('<span class="price-desc__check-icon"></span>');
     });
+
     $('#price-view').text(price);
   }
 
