@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //бургер-меню
 
-  $('.menu-link-box, .burger').click(function(){
+  $('.menu-link-box, .burger').on('click', function(){
     $('.burger').toggleClass('burger__append');
   });
 });
@@ -52,6 +52,7 @@ $(document).ready(function(){
           breakpoint: 767,
           settings: {
             slidesToShow: 3,
+            slidesToScroll: 3,
             autoplay: true,
             autoplaySpeed: 2000,
           }
@@ -102,12 +103,6 @@ $(document).ready(function(){
 
 });
 
-$(document).ready(function(){
-
-  //обводка выбранной цены
-
-});
-
 
 $(document).ready(function(){
 
@@ -131,7 +126,7 @@ $(document).ready(function(){
       $(this).parent().append('<span class="price-desc__check-icon"></span>');
     });
 
-    $('#price-view').text(price);
+    $('#price-view').text(price+' р');
   }
 
 
@@ -168,6 +163,7 @@ $(document).ready(function(){
           breakpoint: 767,
           settings: {
             slidesToShow: 3,
+            slidesToScroll: 3,
             autoplay: true,
             autoplaySpeed: 2000,
           }
@@ -176,6 +172,7 @@ $(document).ready(function(){
           breakpoint: 1199,
           settings: {
             slidesToShow: 3,
+            slidesToScroll: 3,
             autoplay: true,
             autoplaySpeed: 2000,
           }
@@ -191,7 +188,7 @@ $(function () {
   // аккордион для блока с ценами на 320рх
 
   var el = $('#price-list li a');
-  el.click(function() {
+  el.on('click', function() {
     var checkElement = $(this).next();
     
     checkElement.stop().animate({'height':'toggle'}, 500).parent().toggleClass('active');
@@ -235,28 +232,31 @@ $(document).ready(function(){
 
   //модальное окно галереи
 
-  $('#btn-modal-first').click(function(){
-    var img = new Image();
-    img.src = '../img/desc/photo1.jpg';
+  $('.gallery__item').on('click', function(e){
+    e.preventDefault();
+    var link = $(this);
+    var img = link.children('.gallery__item-img-lg');
+    var src = img.attr('src');
 
     $('body').append('<div class="popup">'+
                       '<div class="popup_bg">' +
-                        '<img src="'+img.src+'"class="popup_img" />'+
+                        '<img src="'+src+'"class="popup_img" />'+
                       '</div>'+
                     '</div>');
     $('.popup').fadeIn(800);
     $('body').css('overflow-y','hidden');
+  
 
-    $('.close-modal').click(function(){
-      $('popup').fadeOut(800);
-      $('body').css('overflow-y','');
+  // $('.close-modal').on('click', function(){
+  //   $('popup').fadeOut(800);
+  //   $('body').css('overflow-y','');
 
-      setTimeout(function(){
-        $('.popup').remove();
-      }, 800);
-    });
+  //   setTimeout(function(){
+  //     $('.popup').remove();
+  //   }, 800);
+  // });
 
-    $('.popup_bg').click(function(){
+    $('.popup_bg').on('click', function(){
       $('popup').fadeOut(800);
       $('body').css('overflow-y','');
 
@@ -277,86 +277,5 @@ $(document).ready(function(){
   });
 
 
-  $('#btn-modal-second').click(function(){
-    var img = new Image();
-    img.src = '../img/desc/photo2.jpg';
-
-    $('body').append('<div class="popup">'+
-                      '<div class="popup_bg">' +
-                        '<img src="'+img.src+'"class="popup_img" />'+
-                      '</div>'+
-                    '</div>');
-    $('.popup').fadeIn(800);
-    $('body').css('overflow-y','hidden');
-
-    $('.close-modal').click(function(){
-      $('popup').fadeOut(800);
-      $('body').css('overflow-y','');
-
-      setTimeout(function(){
-        $('.popup').remove();
-      }, 800);
-    });
-
-    $('.popup_bg').click(function(){
-      $('popup').fadeOut(800);
-      $('body').css('overflow-y','');
-
-      setTimeout(function(){
-        $('.popup').remove();
-      }, 800);
-    });
-
-    $(document).keydown(function(eventObject){
-      if (eventObject.which == 27)
-        $('popup').fadeOut(800);
-        $('body').css('overflow-y','');
-
-        setTimeout(function(){
-          $('.popup').remove();
-        }, 800);
-    });
-  });
-
-  $('#btn-modal-third').click(function(){
-    var img = new Image();
-    img.src = '../img/desc/photo3.jpg';
-
-    $('body').append('<div class="popup">'+
-                      '<div class="popup_bg">' +
-                        '<img src="'+img.src+'"class="popup_img" />'+
-                      '</div>'+
-                    '</div>');
-    $('.popup').fadeIn(800);
-    $('body').css('overflow-y','hidden');
-
-    $('.close-modal').click(function(){
-      $('popup').fadeOut(800);
-      $('body').css('overflow-y','');
-
-      setTimeout(function(){
-        $('.popup').remove();
-      }, 800);
-    });
-
-    $('.popup_bg').click(function(){
-      $('popup').fadeOut(800);
-      $('body').css('overflow-y','');
-
-      setTimeout(function(){
-        $('.popup').remove();
-      }, 800);
-    });
-
-    $(document).keydown(function(eventObject){
-      if (eventObject.which == 27)
-        $('popup').fadeOut(800);
-        $('body').css('overflow-y','');
-
-        setTimeout(function(){
-          $('.popup').remove();
-        }, 800);
-    });
-  });
 
 });

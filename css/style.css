@@ -227,6 +227,7 @@ ul {
     margin: 0 auto;
   }
   .trails-programm {
+    outline: none;
   }
   .trails__item {
     position: relative;
@@ -235,7 +236,7 @@ ul {
     
   }
   .trails-programm__photo {
-    width: 214px;
+    width: 100%;
     height: 320px;
     background-position: top;
     background-size: 100%;
@@ -243,8 +244,9 @@ ul {
   .trails-programm__shut-up {
     position: absolute;
     top: 0;
-    padding: 20px 25px;
-    width: 164px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
     height: 120px;
     background-color: rgba(34, 49, 63, 0.75);
   }
@@ -310,16 +312,19 @@ ul {
   .trails-programm__shut-down {
     position: absolute;
     top: 160px;
-    padding: 20px 15px;
-    width: 184px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
     height: 120px;
     background-color: rgba(34, 49, 63, 0.75);
     z-index: 2;
   }
   .trails-programm__description {
     margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 18px;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     letter-spacing: 0.030em;
@@ -769,6 +774,7 @@ ul {
   .reviews-client {
     padding-top: 70px;
     width: 214px;
+    outline: none;
   }
   .reviews-client__box {
     width: 157px;
@@ -1095,6 +1101,9 @@ ul {
   }
   .trails-programm {
     height: 640px;
+    padding: 0;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .trails-programm__image {
     top: 160px;
@@ -1397,14 +1406,19 @@ ul {
   }
   .price-view {
     position: relative;
+    top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
-    font-size: 16px;
-    color: #000;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    color: #22313f;
+    background-color: rgba(231, 231, 231, 0.91);
     z-index: 2;
   }
   .price-desc__ftr {
     position: relative;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
     z-index: 2;
@@ -1523,12 +1537,15 @@ ul {
     
   }
   .trails__block {
-    width: 100%;
+    width: 1172px;
+    padding-left: 14px;
+    padding-right: 14px;
     padding-top: 40px;
   }
   .trails-programm {
-    display: inline-block;
-    margin-right: 1%;
+    padding: 0;
+    margin-right: 4%;
+    margin-left: 0;
   }
   .trails-programm:last-child {
     margin-right: 0;
@@ -1670,6 +1687,9 @@ ul {
   .gallery__item:last-child {
     padding-right: 0;
   }
+  .gallery__item:before {
+
+  }
   .promo-slider__slide {
   }
   .gallery__item-img {
@@ -1748,7 +1768,7 @@ ul {
     z-index: 3;
     box-shadow: 4px 0 29px rgba(0, 0, 0, .55);
   }
-  .popup_img:after {
+  .popup_close {
     display: inline-block;
     content: '';
     position: absolute;
@@ -1846,9 +1866,14 @@ ul {
   }
   .price-view {
     position: relative;
+    top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
-    font-size: 16px;
-    color: #000;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    color: #22313f;
+    background-color: rgba(231, 231, 231, 0.91);
     z-index: 2;
   }
   .price-desc__ftr {
