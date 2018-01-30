@@ -1605,6 +1605,7 @@ ul {
   }
   .shares__block-text {
     padding: 35px 15px;
+    transition: all .5s;
   }
   .shares__block-color-layer {
     opacity: 0;

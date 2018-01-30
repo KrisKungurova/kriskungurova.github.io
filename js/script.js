@@ -64,7 +64,21 @@ $(document).ready(function(){
       ]
     });
   }
+});
 
+$(document).ready(function(){
+
+  //убираем текст под слоем в блоке "Акции"
+
+  $('.shares__block-color-layer').hover(function(){
+    var colLayer = $(this);
+    colLayer.parent().children('.shares__block-text').css('opacity','0');
+  });
+
+  $('.shares__block-color-layer').mouseleave(function(){
+    var colLayer = $(this);
+    colLayer.parent().children('.shares__block-text').css('opacity','1');
+  });
 });
 
 $(document).ready(function(){
@@ -198,6 +212,52 @@ $(function () {
   });
 });
 
+$(document).ready(function(){
+
+  //модальное окно галереи
+
+  $('.gallery__item').on('click', function(e){
+    e.preventDefault();
+    var link = $(this);
+    var img = link.children('.gallery__item-img-lg');
+    var src = img.attr('src');
+    var h = img.attr('height');
+    var w = img.attr('width');
+
+
+    $('body').append('<div class="popup">'+
+                      '<div class="popup_bg">' +
+                        '<img src="'+src+'"class="popup_img" />'+
+                      '</div>'+
+                    '</div>');
+    $('.popup_bg').css({'width': w,
+                        'height': h});
+    $('.popup').fadeIn(800);
+    $('body').css('overflow-y','hidden');
+
+
+    $('.popup_bg').on('click', function(){
+      $('popup').fadeOut(800);
+      $('body').css('overflow-y','');
+
+      setTimeout(function(){
+        $('.popup').remove();
+      }, 800);
+    });
+
+    $(document).keydown(function(eventObject){
+      if (eventObject.which == 27)
+        $('popup').fadeOut(800);
+        $('body').css('overflow-y','');
+
+        setTimeout(function(){
+          $('.popup').remove();
+        }, 800);
+    });
+  });
+});
+
+
 $(document).ready(function(){ 
 
   //кнопка прокрутки вверх
@@ -226,52 +286,4 @@ $(document).ready(function(){
     }
   }
   
-});
-
-$(document).ready(function(){
-
-  //модальное окно галереи
-
-  $('.gallery__item').on('click', function(e){
-    e.preventDefault();
-    var link = $(this);
-    var img = link.children('.gallery__item-img-lg');
-    var src = img.attr('src');
-    var h = img.attr('height');
-    var w = img.attr('width');
-
-
-    $('body').append('<div class="popup">'+
-                      '<div class="popup_bg">' +
-                        '<img src="'+src+'"class="popup_img" />'+
-                      '</div>'+
-                    '</div>');
-    $('.popup_bg').css({'width': w,
-                        'height': h});
-    $('.popup').fadeIn(800);
-    $('body').css('overflow-y','hidden');
-    
-
-    $('.popup_bg').on('click', function(){
-      $('popup').fadeOut(800);
-      $('body').css('overflow-y','');
-
-      setTimeout(function(){
-        $('.popup').remove();
-      }, 800);
-    });
-
-    $(document).keydown(function(eventObject){
-      if (eventObject.which == 27)
-        $('popup').fadeOut(800);
-        $('body').css('overflow-y','');
-
-        setTimeout(function(){
-          $('.popup').remove();
-        }, 800);
-    });
-  });
-
-
-
 });
