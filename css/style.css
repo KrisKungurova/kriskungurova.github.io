@@ -55,9 +55,8 @@ ul {
     background-position: -48px -5px;
   }
   .burger {
-    display: block;
+    display: none;
     position: absolute;
-    opacity: 0;
     padding-top: 75px;
     padding-bottom: 110px;
     margin: 0;
@@ -69,7 +68,7 @@ ul {
     z-index: 1;
   }
   .burger__append {
-    opacity: 1;
+    display: block;
   }
   .burger__item {
     padding-top: 5px;
@@ -397,12 +396,12 @@ ul {
   }
   .we-have {
     position: relative;
-  }
-  .we-have__container {
-    width: 292px;
     background-image: url(../img/320/cameron-kirby-128899.jpg);
     background-position: top center;
     background-repeat: no-repeat;
+  }
+  .we-have__container {
+    width: 292px;
     left: 0;
     right: 0;
     margin: auto;
@@ -482,6 +481,37 @@ ul {
   }
   .gallery__item {
     position: relative;
+    outline: none;
+  }
+  .popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+    background: rgba( 0, 0, 0, .4);
+    cursor: pointer;
+  }
+  .popup_bg {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .popup_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    box-shadow: 4px 0 29px rgba(0, 0, 0, .55);
   }
   .gallery-block {
     position: relative;
@@ -1143,12 +1173,14 @@ ul {
     display: none;
   }
   .we-have {
+    background-image: url(../img/768/cameron-kirby-128899.jpg);
+    background-size: cover;
+    background-position: top center;
   }
   .we-have__container {
     padding-top: 40px;
     padding-bottom: 110px;
     width: 740px;
-    background-image: url(../img/768/cameron-kirby-128899.jpg);
   }
   .we-have__title {
     margin: 0;
@@ -1193,6 +1225,7 @@ ul {
     display: inline-block;
     text-align: center;
     width: 33.333333%;
+    outline: none;
   }
   .gallery__item:first-child {
     text-align: left;
@@ -1211,13 +1244,54 @@ ul {
   .gallery__item-img-lg {
     display: none;
   }
+  .popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+    background: rgba( 0, 0, 0, .4);
+    cursor: pointer;
+    z-index: 1;
+  }
+  .popup_bg {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .popup_bg:after {
+    content: '';
+    position: absolute;
+    right: -45px;
+    cursor: pointer;
+    width: 41px;
+    height: 43px;
+    background-image: url(../img/close.png);
+    z-index: 3;
+  }
+  .popup_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    box-shadow: 4px 0 29px rgba(0, 0, 0, .55);
+  }
   .price {
     display: none;
   }
   .price__bg {
     position: absolute;
     margin-top: 100px;
-    height: 1564px;
+    height: 1600px;
     background-image: url(../img/768/foot.jpg);
     background-position: top center;
     background-repeat: no-repeat;
@@ -1404,17 +1478,26 @@ ul {
     color: #22313f;
     background-color: rgba(231, 231, 231, 0.91);
   }
-  .price-view {
+  .price-desc__view {
     position: relative;
     top: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
+    padding: 15px 14px;
     font-size: 24px;
     font-family: "Open Sans", sans-serif;
     color: #22313f;
+    text-align: left;
+    text-transform: uppercase;
     background-color: rgba(231, 231, 231, 0.91);
     z-index: 2;
+  }
+  .price-desc__view-text {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .price-desc__view-price {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
   }
   .price-desc__ftr {
     position: relative;
@@ -1638,12 +1721,13 @@ ul {
     text-decoration: underline;
   }
   .we-have {
+    background-image: url(../img/desc/cameron-kirby-128899.jpg);
+    background-size: cover;
+    background-position: top center;
   }
   .we-have__container {
-    width: 100%;
-    background-image: url(../img/desc/cameron-kirby-128899.jpg);
+    width: 1172px;
     box-sizing: border-box;
-    background-size: cover;
   }
   .we-have__title {
   }
@@ -1751,6 +1835,7 @@ ul {
     text-align: center;
     background: rgba( 0, 0, 0, .4);
     cursor: pointer;
+    z-index: 1;
   }
   .popup_bg {
     position: absolute;
@@ -1823,14 +1908,6 @@ ul {
     text-align: center;
     position: relative;
   }
-  /*.checked-icon {
-    background-image: url(../img/checked.png);
-    width: 22px;
-    height: 16px;
-    position: absolute;
-    right: 40px;
-
-  }*/
   .price-desc__check {
     position: absolute;
     z-index: -1;
@@ -1867,17 +1944,28 @@ ul {
   }
   .price-desc__operator-price {
   }
-  .price-view {
+  .price-desc__view {
     position: relative;
     top: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
+    padding: 15px 14px;
+    margin-left: -14px;
+    margin-right: -14px;
     font-size: 24px;
     font-family: "Open Sans", sans-serif;
     color: #22313f;
+    text-align: left;
+    text-transform: uppercase;
     background-color: rgba(231, 231, 231, 0.91);
     z-index: 2;
+  }
+  .price-desc__view-text {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .price-desc__view-price {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
   }
   .price-desc__ftr {
   }

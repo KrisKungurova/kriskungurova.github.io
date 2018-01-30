@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //бургер-меню
 
-  $('.menu-link-box, .burger').on('click', function(){
+  $('#burger').on('click', function(){
     $('.burger').toggleClass('burger__append');
   });
 });
@@ -236,7 +236,7 @@ $(document).ready(function(){
     $('body').css('overflow-y','hidden');
 
 
-    $('.popup_bg').on('click', function(){
+    $('.popup').on('click', function(){
       $('popup').fadeOut(800);
       $('body').css('overflow-y','');
 
