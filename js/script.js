@@ -237,24 +237,20 @@ $(document).ready(function(){
     var link = $(this);
     var img = link.children('.gallery__item-img-lg');
     var src = img.attr('src');
+    var h = img.attr('height');
+    var w = img.attr('width');
+
 
     $('body').append('<div class="popup">'+
                       '<div class="popup_bg">' +
                         '<img src="'+src+'"class="popup_img" />'+
                       '</div>'+
                     '</div>');
+    $('.popup_bg').css({'width': w,
+                        'height': h});
     $('.popup').fadeIn(800);
     $('body').css('overflow-y','hidden');
-  
-
-  // $('.close-modal').on('click', function(){
-  //   $('popup').fadeOut(800);
-  //   $('body').css('overflow-y','');
-
-  //   setTimeout(function(){
-  //     $('.popup').remove();
-  //   }, 800);
-  // });
+    
 
     $('.popup_bg').on('click', function(){
       $('popup').fadeOut(800);
