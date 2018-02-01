@@ -1091,6 +1091,7 @@ ul {
     font-size: 18px;
     letter-spacing: 0.030em;
     color: #000;
+    outline: none;
   }
   .page-header__promo {
     padding-top: 90px;
