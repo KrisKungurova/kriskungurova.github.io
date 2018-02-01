@@ -1092,26 +1092,6 @@ ul {
     letter-spacing: 0.030em;
     color: #000;
   }
-  .page-nav__link:after {
-    display: none;
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 32%;
-    height: 1px;
-    width: 30px;
-    background-color: #000;
-  }
-  .page-nav__link:hover:after {
-    display: block;
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 32%;
-    height: 1px;
-    width: 30px;
-    background-color: #000;
-  }
   .page-header__promo {
     padding-top: 90px;
     padding-bottom: 260px;
@@ -1616,6 +1596,26 @@ ul {
   }
   .page-header__promo {
     padding-bottom: 285px;
+  }
+  .page-nav__link:after {
+    display: none;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 32%;
+    height: 1px;
+    width: 30px;
+    background-color: #000;
+  }
+  .page-nav__link:hover:after {
+    display: block;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 32%;
+    height: 1px;
+    width: 30px;
+    background-color: #000;
   }
   .page-header__btn {
     position: relative;
