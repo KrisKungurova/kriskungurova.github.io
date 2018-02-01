@@ -3,7 +3,8 @@ $(document).ready(function(){
   //бургер-меню
 
   $('#burger').on('click', function(){
-    $('.burger').toggleClass('burger__append');
+    $('.burger').animate({'height':'toggle'}, 500).toggleClass('burger__append');
+    return false;
   });
 });
 
@@ -11,13 +12,18 @@ $(document).ready(function(){
 
   //переход по нажатию кнопки "купить билет" к соотв-му блоку
 
-    $('a[href*=#btn-buy]').on('click', function(e){
+    $('a[href*=#btn-buy], a[href*=#trails], a[href*=#shares], a[href*=#reviews], a[href*=#price-desc]').on('click', function(e){
         var anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top
         }, 777);
+        if ($('.burger').hasClass('burger__append')) {
+          $('.burger').animate({'height':'toggle'}, 500).toggleClass('burger__append');
+        }
+        else {
+
+        }
         e.preventDefault();
-        return false;
     });
 });
 
@@ -54,7 +60,8 @@ $(document).ready(function(){
             slidesToShow: 3,
             slidesToScroll: 3,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 4000,
+            speed: 4000,
           }
         },
         {
@@ -117,101 +124,6 @@ $(document).ready(function(){
 
 });
 
-
-$(document).ready(function(){
-
-  //подсчет цены
-
-  $('input:checkbox').on('change', function(){
-    $(this).parent().removeClass('price-desc--check');
-    $('span').removeClass('price-desc__check-icon');
-    calcPrice();
-  });
-
-  calcPrice();
-
-  function calcPrice() {
-    var price = 0;
-    
-
-    $('input:checked').each(function(){
-      price = price + $(this).data('price');
-      $(this).parent().addClass('price-desc--check');
-      $(this).parent().append('<span class="price-desc__check-icon"></span>');
-    });
-
-    $('#price-view').text(price+' р');
-  }
-
-
-});
-
-$(document).ready(function(){
-
-  // Карусель блока отзывы
-
-  var timer;
-  $(window).on('resize', function(){
-    if ( timer ) clearTimeout(timer);
-    timer = setTimeout(function(){
-      togglePromotionsSlider();
-    }, 100);
-  });
-
-  togglePromotionsSlider();
-
-  function togglePromotionsSlider (){
-    $('#slider-reviews').slick({
-      mobileFirst: true,
-      infinite: true,
-      slidesToScroll: 1,
-      initialSlide: 1,
-      responsive: [
-        {
-          breakpoint: 0,
-          settings: {
-            slidesToShow: 1,
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          }
-        },
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          }
-        },
-      ]
-    });
-  }
-
-});
-
-$(function () {
-
-  // аккордион для блока с ценами на 320рх
-
-  var el = $('#price-list li a');
-  el.on('click', function() {
-    var checkElement = $(this).next();
-    
-    checkElement.stop().animate({'height':'toggle'}, 500).parent().toggleClass('active');
-    if(checkElement.is('ul')) {
-      return false;
-    }
-  });
-});
-
 $(document).ready(function(){
 
   //модальное окно галереи
@@ -257,6 +169,166 @@ $(document).ready(function(){
   });
 });
 
+$(function () {
+
+  // аккордион для блока с ценами на 320рх
+
+  var el = $('#price-list li a');
+  el.on('click', function() {
+    var checkElement = $(this).next();
+    
+    checkElement.stop().animate({'height':'toggle'}, 500).parent().toggleClass('active');
+    if(checkElement.is('ul')) {
+      return false;
+    }
+  });
+});
+
+$(document).ready(function(){
+
+  //подсчет цены
+
+  $('input:checkbox').on('change', function(){
+    $(this).parent().removeClass('price-desc--check');
+    $('span').removeClass('price-desc__check-icon');
+    calcPrice();
+  });
+
+  calcPrice();
+
+  function calcPrice() {
+    var price = 0;
+    
+
+    $('input:checked').each(function(){
+      price = price + $(this).data('price');
+      $(this).parent().addClass('price-desc--check');
+      $(this).parent().append('<span class="price-desc__check-icon"></span>');
+    });
+
+    $('#price-view').text(price+' р');
+  }
+
+
+  //подсчет цены 320px
+  priceMobile();
+   function priceMobile(e) {
+    if ($('#child').attr('checked')=='checked' && $('#all').attr('checked')=='checked') {
+        $('#three-hours').attr('data-time', '2200');
+      }
+    else if ($('#child').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked') {
+        $('#three-hours').attr('data-time', '1000');
+      }
+    else if ($('#child').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked') {
+        $('#three-hours').attr('data-time', '1200');
+      }
+    else if ($('#child').attr('checked')=='checked' && $('#all').attr('checked')=='checked') {
+        $('#twelve-hours').attr('data-time', '5500');
+      }
+    else if ($('#child').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked') {
+        $('#twelve-hours').attr('data-time', '3000');
+      }
+    else if ($('#child').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked') {
+        $('#twelve-hours').attr('data-time', '4000');
+      }
+
+    else if ($('#adult').attr('checked')=='checked' && $('#all').attr('checked')=='checked') {
+        $('#three-hours]').attr('data-time', '2500');
+      }
+    else if ($('#adult').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked') {
+        $('#three-hours]').attr('data-time', '1300');
+      }
+    else if ($('#adult').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked') {
+        $('#three-hours]').attr('data-time', '1500');
+      }
+    else if ($('#adult').attr('checked')=='checked' && $('#all').attr('checked')=='checked') {
+        $('#twelve-hours').attr('data-time', '6000');
+      }
+    else if ($('#adult').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked') {
+        $('#twelve-hours').attr('data-time', '3500');
+      }
+    else if ($('#adult').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked') {
+        $('#twelve-hours').attr('data-time', '4500');
+      }
+  }
+
+  $('input:radio').on('change', function(){
+    $(this).parent().removeClass('price-desc--check');
+    $('span.price-desc__check-icon').remove();
+    priceMobile();
+    calcPriceMobile();
+    });
+
+    calcPriceMobile();
+
+    function calcPriceMobile() {
+      
+
+      var time = 0;
+
+      $('input:checked').each(function(){
+        time = time + $(this).data('time');
+        $(this).parent('li').addClass('price-desc--check');
+        $(this).parent().append('<span class="price-desc__check-icon"></span>');
+      });
+
+      $('#price__digits').text(time+' р');
+    }
+
+});
+
+$(document).ready(function(){
+
+  // Карусель блока отзывы
+
+  var timer;
+  $(window).on('resize', function(){
+    if ( timer ) clearTimeout(timer);
+    timer = setTimeout(function(){
+      togglePromotionsSlider();
+    }, 100);
+  });
+
+  togglePromotionsSlider();
+
+  function togglePromotionsSlider (){
+    $('#slider-reviews').slick({
+      mobileFirst: true,
+      infinite: true,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      responsive: [
+        {
+          breakpoint: 0,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 4000,
+          }
+        },
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 4000,
+          }
+        },
+      ]
+    });
+  }
+
+});
 
 $(document).ready(function(){ 
 
