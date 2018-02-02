@@ -269,19 +269,19 @@
 
       <div class="row">
       <form action='' class="price__form" id="price__form-min"></form>
-        <ul class="price-list">
+        <ul id="price-list" class="price-list">
           <li class="price-list__item">
             <a href="#" class="price-list__link">Выберите возраст</a>
             <ul class="price-list__inner-list">
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check">
+                  <input id="child" type="radio" name="age" form="price__form-min" class="price-list__check">
                   <h3 class="price-list__title">Детский</h3> от 4 лет
                 </label>
               </li>
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Взрослый</h3> от 7 лет
+                  <input id="adult" type="radio" name="age" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Взрослый</h3> от 7 лет
                 </label>
               </li>
             </ul>
@@ -292,17 +292,17 @@
             <ul class="price-list__inner-list">
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Все трассы</h3> веревочный парк + скалодром
+                  <input id="all" type="radio" name="trails" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Все трассы</h3> веревочный парк + скалодром
                 </label>
               </li>
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Скалодром</h3>
+                  <input id="climbing-wall" type="radio" name="trails" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Скалодром</h3>
                 </label>
               </li>
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Веревочный парк</h3>
+                  <input id="rope-park" type="radio" name="trails" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Веревочный парк</h3>
                 </label>
               </li>
             </ul>
@@ -313,12 +313,12 @@
             <ul class="price-list__inner-list">
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Прохождение парка</h3> за 3 часа
+                  <input id="three-hourse" type="radio" name="time" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Прохождение парка</h3> за 3 часа
                 </label>
               </li>
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input type="radio" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Прохождение парка</h3> за 12 часов
+                  <input id="twelve-hours" type="radio" name="time" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Прохождение парка</h3> за 12 часов
                 </label>
               </li>
             </ul>
