@@ -178,6 +178,7 @@ $(function () {
     var checkElement = $(this).next();
     
     checkElement.stop().animate({'height':'toggle'}, 500).parent().toggleClass('active');
+    $(this).children().toggleClass('active-icon');
     if(checkElement.is('ul')) {
       return false;
     }
@@ -198,83 +199,78 @@ $(document).ready(function(){
 
   function calcPrice() {
     var price = 0;
-    
-
     $('input:checked').each(function(){
       price = price + $(this).data('price');
       $(this).parent().addClass('price-desc--check');
       $(this).parent().append('<span class="price-desc__check-icon"></span>');
     });
-
     $('#price-view').text(price+' р');
   }
 });
 
 $(document).ready(function(){
 
+  //подсчет цены на 320px
+
+  $('input[type=radio]').on('change', function(){
+    if ($('input[type=radio]').not(':checked')) {
+       $('input[type=radio]').parent().parent().removeClass('price-desc--check');
+     }
+  $('input[type=radio]:checked').each(function(){
+    $(this).parent().parent().addClass('price-desc--check');
+  });
+  priceMobile();
+  calcPriceMobile();
+  });
+
   priceMobile();
   function priceMobile() {
-   if ($('#child').attr('checked')=='checked' && $('#all').attr('checked')=='checked' && $('#three-hourse').attr('checked')=='checked') {
-       $('#three-hourse').attr('data-time', '2200');
+   if ($('#child').is(':checked') && $('#all').is(':checked') && $('#three-hours').is(':checked')) {
+       $('#three-hours').attr('data-time', '2200');
      }
-   else if ($('#child').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked' && $('#three-hourse').attr('checked')=='checked') {
-       $('#three-hourse').attr('data-time', '1000');
+   else if ($('#child').is(':checked') && $('#climbing-wall').is(':checked') && $('#three-hours').is(':checked')) {
+       $('#three-hours').attr('data-time', '1000');
      }
-   else if ($('#child').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked' && $('#three-hourse').attr('checked')=='checked') {
-       $('#three-hourse').attr('data-time', '1200');
+   else if ($('#child').is(':checked') && $('#rope-park').is(':checked') && $('#three-hours').is(':checked')) {
+       $('#three-hours').attr('data-time', '1200');
      }
-   else if ($('#child').attr('checked')=='checked' && $('#all').attr('checked')=='checked' && $('#twelve-hours').attr('checked')=='checked') {
+   else if ($('#child').is(':checked') && $('#all').is(':checked') && $('#twelve-hours').is(':checked')) {
        $('#twelve-hours').attr('data-time', '5500');
      }
-   else if ($('#child').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked' && $('#twelve-hours').attr('checked')=='checked') {
+   else if ($('#child').is(':checked') && $('#climbing-wall').is(':checked') && $('#twelve-hours').is(':checked')) {
        $('#twelve-hours').attr('data-time', '3000');
      }
-   else if ($('#child').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked' && $('#twelve-hours').attr('checked')=='checked') {
+   else if ($('#child').is(':checked') && $('#rope-park').is(':checked') && $('#twelve-hours').is(':checked')) {
        $('#twelve-hours').attr('data-time', '4000');
      }
-   else if ($('#adult').attr('checked')=='checked' && $('#all').attr('checked')=='checked' && $('#three-hourse').attr('checked')=='checked') {
-       $('#three-hourse]').attr('data-time', '2500');
+   else if ($('#adult').is(':checked') && $('#all').is(':checked') && $('#three-hours').is(':checked')) {
+       $('#three-hours').attr('data-time', '2500');
      }
-   else if ($('#adult').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked' && $('#three-hourse').attr('checked')=='checked') {
-       $('#three-hourse]').attr('data-time', '1300');
+   else if ($('#adult').is(':checked') && $('#climbing-wall').is(':checked') && $('#three-hours').is(':checked')) {
+       $('#three-hours').attr('data-time', '1300');
      }
-   else if ($('#adult').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked' && $('#three-hourse').attr('checked')=='checked') {
-       $('#three-hourse]').attr('data-time', '1500');
+   else if ($('#adult').is(':checked') && $('#rope-park').is(':checked') && $('#three-hours').is(':checked')) {
+       $('#three-hours').attr('data-time', '1500');
      }
-   else if ($('#adult').attr('checked')=='checked' && $('#all').attr('checked')=='checked' && $('#twelve-hours').attr('checked')=='checked') {
+   else if ($('#adult').is(':checked') && $('#all').is(':checked') && $('#twelve-hours').is(':checked')) {
        $('#twelve-hours').attr('data-time', '6000');
      }
-   else if ($('#adult').attr('checked')=='checked' && $('#climbing-wall').attr('checked')=='checked' && $('#twelve-hours').attr('checked')=='checked') {
+   else if ($('#adult').is(':checked') && $('#climbing-wall').is(':checked') && $('#twelve-hours').is(':checked')) {
        $('#twelve-hours').attr('data-time', '3500');
      }
-   else if ($('#adult').attr('checked')=='checked' && $('#rope-park').attr('checked')=='checked' && $('#twelve-hours').attr('checked')=='checked') {
+   else if ($('#adult').is(':checked') && $('#rope-park').is(':checked') && $('#twelve-hours').is(':checked')) {
        $('#twelve-hours').attr('data-time', '4500');
      }
     }
 
-    $('input[type=radio]:radio').on('change', function(){
-   $(this).parent().removeClass('price-desc--check');
-   $('span.price-desc__check-icon').remove();
-   priceMobile();
    calcPriceMobile();
-   });
-
-   calcPriceMobile();
-
    function calcPriceMobile() {
-     
-
      var time = 0;
-
-     $('input[type=radio]:checked').each(function(){
-       time = time + $(this).data('time');
-       $(this).parent('li').addClass('price-desc--check');
-       $(this).parent().append('<span class="price-desc__check-icon"></span>');
+     $('input[id*=twelve-hours]:checked, input[id*=three-hours]:checked').each(function(){
+      time = time + $(this).data('time');
      });
-
      $('#price__digits').text(time+' р');
    }
-
 });
 
 $(document).ready(function(){

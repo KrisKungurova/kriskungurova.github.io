@@ -271,7 +271,7 @@
       <form action='' class="price__form" id="price__form-min"></form>
         <ul id="price-list" class="price-list">
           <li class="price-list__item">
-            <a href="#" class="price-list__link">Выберите возраст</a>
+            <a href="#" class="price-list__link">Выберите возраст<span class="price-list__link-icon"></span></a>
             <ul class="price-list__inner-list">
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
@@ -288,7 +288,7 @@
           </li>
 
           <li class="price-list__item">
-            <a href="#" class="price-list__link">Выберите место</a>
+            <a href="#" class="price-list__link">Выберите место <span class="price-list__link-icon"></span></a>
             <ul class="price-list__inner-list">
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
@@ -309,11 +309,11 @@
           </li>
 
           <li class="price-list__item">
-            <a href="#" class="price-list__link">Выберите длительность</a>
+            <a href="#" class="price-list__link">Выберите длительность <span class="price-list__link-icon"></span></a>
             <ul class="price-list__inner-list">
               <li class="price-list__inner-item">
                 <label class="price-list__inner-link">
-                  <input id="three-hourse" type="radio" name="time" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Прохождение парка</h3> за 3 часа
+                  <input id="three-hours" type="radio" name="time" form="price__form-min" class="price-list__check"><h3 class="price-list__title">Прохождение парка</h3> за 3 часа
                 </label>
               </li>
               <li class="price-list__inner-item">
@@ -330,7 +330,7 @@
       <div class="row">
         <div class="price__full">
           <p class="price__aboniment">Стоимость абонемента</p>
-          <span id="price__digits" class="price__digits"> Р</span>
+          <span id="price__digits" class="price__digits"> </span>
         </div>
         <div class="price__about">
           <p class="price__about-buy">Персональный оператор парка</p>
@@ -346,9 +346,8 @@
     </div>
   </section>
 
-  <div class="price__bg"></div>
-
   <section id="price-desc" class="price-desc">
+    <div class="price-desc__bg"></div>
     <div class="price-desc__container container">
       <div id="btn-buy" class="price-desc__title">Цены</div>
       <form action='' class="price-desc__form" id="price-desc__form"></form>

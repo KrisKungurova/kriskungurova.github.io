@@ -580,7 +580,7 @@ ul {
     letter-spacing: 0.030em;
     text-decoration: none;
   }
-  .price-list__link:after {
+  .price-list__link-icon {
     position: relative;
     top: -4px;
     right: 29px;
@@ -594,13 +594,13 @@ ul {
     float: right;
     transition: all .5s;
   }
-  .price-list__link:active:after {
-    transform: rotate(-90deg);
-    
-  }
   .active {
     border-bottom: 0;
     padding-bottom: 0;
+  }
+  .active-icon {
+    transition: all .5s;
+    transform: rotate(-90deg);
   }
   .price-list__inner-list {
     margin: 0;
@@ -634,7 +634,7 @@ ul {
     margin: 10px;
   }
   .price-desc--check {
-    border: 2px solid #960000;
+    background-color: #720000;
   }
   .price-desc__check-icon {
     content: '';
@@ -1403,14 +1403,7 @@ ul {
   }
   .price-desc--check {
     border: 2px solid #960000;
-  }
-  .price-desc__check-icon {
-    content: '';
-    position: absolute;
-    background-image: url(../img/checked.png);
-    width: 22px;
-    height: 16px;
-    right: 15px;
+    background-color: transparent;
   }
   .price-desc__text {
     position: relative;
@@ -1894,7 +1887,11 @@ ul {
   }
   .price-desc__form {
   }
-  .price__bg {
+  .price-desc__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     min-height: 1786px;
     background-image: url(../img/desc/foot.jpg);
     background-position: top center;
