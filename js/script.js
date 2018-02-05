@@ -215,15 +215,14 @@ $(document).ready(function(){
   $('input[type=radio]').on('change', function(){
     if ($('input[type=radio]').not(':checked')) {
        $('input[type=radio]').parent().parent().removeClass('price-desc--check');
-     }
-  $('input[type=radio]:checked').each(function(){
-    $(this).parent().parent().addClass('price-desc--check');
-  });
-  priceMobile();
-  calcPriceMobile();
+       }
+    $('input[type=radio]:checked').each(function(){
+      $(this).parent().parent().addClass('price-desc--check');
+    });
+    priceMobile();
+    calcPriceMobile();
   });
 
-  priceMobile();
   function priceMobile() {
    if ($('#child').is(':checked') && $('#all').is(':checked') && $('#three-hours').is(':checked')) {
        $('#three-hours').attr('data-time', '2200');
@@ -263,11 +262,10 @@ $(document).ready(function(){
      }
     }
 
-   calcPriceMobile();
    function calcPriceMobile() {
      var time = 0;
      $('input[id*=twelve-hours]:checked, input[id*=three-hours]:checked').each(function(){
-      time = time + $(this).data('time');
+      time = $(this).attr('data-time');
      });
      $('#price__digits').text(time+' р');
    }
