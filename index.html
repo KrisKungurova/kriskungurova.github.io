@@ -23,7 +23,7 @@
         <ul class="burger container">
           <li class="burger__item"><a href="#trails" class="burger__link">Трассы</a></li>
           <li class="burger__item"><a href="#shares" class="burger__link">Акции</a></li>
-          <li class="burger__item"><a href="#price" class="burger__link">Цены</a></li>
+          <li class="burger__item"><a href="#btn-buy" class="burger__link">Цены</a></li>
           <li class="burger__item"><a href="#reviews" class="burger__link">Отзывы</a></li>
           <li class="burger__item"><a href="#" class="burger__link">Контакты</a></li>
           <li class="burger__social">
@@ -61,6 +61,7 @@
           </div>
         </div>
           <a href="#btn-buy" class="btn page-header__btn">Купить билет</a>
+          <a href="#price-desc" class="btn__price-desc"></a>
       </div>
     </div>
   </header>
@@ -254,7 +255,7 @@
             <img src="img/320/photo3.jpg" alt="photo" class="gallery__item-img">
             <img src="img/768/photo3.jpg" alt="photo" class="gallery__item-img-med">
             <img src="img/desc/photo3.jpg" alt="photo" class="gallery__item-img-lg" width="359" height="484">
-            <div  class="gallery__item-hover --position-right">
+            <div class="gallery__item-hover --position-right">
               <span class="gallery__item-hover-icon icon"></span>
             </div>
           </a>
@@ -263,9 +264,9 @@
     </div>
   </section>
 
-  <section  class="price"> 
+  <section id="btn-buy" class="price"> 
     <div class="price__container container">
-      <h2 id="price-min" class="price-title">Цены</h2>
+      <h2 class="price-title">Цены</h2>
 
       <div class="row">
       <form class="price__form" id="price__form-min"></form>
@@ -349,9 +350,9 @@
   <section id="price-desc" class="price-desc">
     <div class="price-desc__bg"></div>
     <div class="price-desc__container container">
-      <div id="btn-buy" class="price-desc__title">Цены</div>
+      <div class="price-desc__title">Цены</div>
       <form class="price-desc__form" id="price-desc__form"></form>
-      <table class="price-desc__table" cellspacing="0">
+      <table class="price-desc__table">
         <tr class="price-desc__row">
           <td class="price-desc__title-empty"></td>
           <td class="price-desc__title-table">Детский <span class="--smoller">от 4 лет</span></td>
