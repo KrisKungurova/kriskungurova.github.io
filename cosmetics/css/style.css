@@ -27,7 +27,9 @@ a {
     outline: none!important;
 }
 @media (min-width: 320px) {
-
+    .wrapper {
+        overflow: hidden;
+    }
     .clearfix:after {
         content: "";
         display: table;
@@ -50,7 +52,6 @@ a {
     .footer:before {
         content: "";
         position: absolute;
-        width: 100%;
         height: 632px;
         left: 0;
         top: 0;
@@ -107,7 +108,6 @@ a {
     .header_right {
         position: relative;
         display: inline-block;
-        width: 100%;
 }
     }
     .header_right .footer_right {
@@ -121,7 +121,7 @@ a {
         position: relative;
         right: 0;
         z-index: 10;
-        width: 100%;
+        width: 276px;
     }
 
     .header_right .sale,
@@ -439,7 +439,7 @@ a {
     .why-block {
         padding-top: 40px;
         background: #fff url(../img/why-block_bg.png) no-repeat right;
-        background-size: contain;
+        background-size: cover;
     }
 
     .why-block .container {
@@ -1187,7 +1187,7 @@ a {
     }
 }
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
 
     .container {
         max-width: 1024px;
